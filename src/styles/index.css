@@ -37,7 +37,8 @@ body {
   background-color: gray;
   border-radius: 10%;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
+  box-shadow: 4px 2px 15px 0px #000;
 }
 
 .input-group {
@@ -49,4 +50,14 @@ body {
 .preview-wrapper {
   padding: 5rem;
   flex: 1;
+}
+
+.resume-display {
+  background-color: white;
+  color: black;
+  height: 85vh;
+  width: calc(85vh * 8.5 / 11);
+  font-size: 1vh;
+  padding: 1em;
+  box-shadow: 8px 5px 15px 0px #000;
 }

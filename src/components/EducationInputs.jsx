@@ -7,7 +7,7 @@ export default function EducationInputs({ handleChange, response }) {
           name="educationName"
           type="text"
           onChange={handleChange}
-          value={response[0].educationName}
+          defaultValue={response[0].educationName}
         />
       </div>
       <div className="input-group">
@@ -16,7 +16,7 @@ export default function EducationInputs({ handleChange, response }) {
           name="degree"
           type="text"
           onChange={handleChange}
-          value={response[0].degree}
+          defaultValue={response[0].degree}
         />
       </div>
       <div className="input-group">
@@ -25,7 +25,7 @@ export default function EducationInputs({ handleChange, response }) {
           name="educationDateStart"
           type="text"
           onChange={handleChange}
-          value={response[0].educationDateStart}
+          defaultValue={response[0].educationDateStart}
         />
       </div>
       <div className="input-group">
@@ -34,7 +34,7 @@ export default function EducationInputs({ handleChange, response }) {
           name="educationDateEnd"
           type="text"
           onChange={handleChange}
-          value={response[0].educationDateEnd}
+          defaultValue={response[0].educationDateEnd}
         />
       </div>
     </div>

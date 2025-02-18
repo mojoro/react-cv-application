@@ -7,7 +7,7 @@ export default function ContactInputs({ handleChange, response }) {
           name="name"
           type="text"
           onChange={handleChange}
-          value={response.name}
+          defaultValue={response.name}
         />
       </div>
       <div className="input-group">
@@ -16,7 +16,7 @@ export default function ContactInputs({ handleChange, response }) {
           name="email"
           type="text"
           onChange={handleChange}
-          value={response.email}
+          defaultValue={response.email}
         />
       </div>
       <div className="input-group">
@@ -25,7 +25,7 @@ export default function ContactInputs({ handleChange, response }) {
           name="phone"
           type="text"
           onChange={handleChange}
-          value={response.phone}
+          defaultValue={response.phone}
         />
       </div>
     </div>

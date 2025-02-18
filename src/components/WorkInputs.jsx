@@ -7,7 +7,7 @@ export default function WorkInputs({ handleChange, response }) {
           name="workName"
           type="text"
           onChange={handleChange}
-          value={response[0].workName}
+          defaultValue={response[0].workName}
         />
       </div>
       <div className="input-group">
@@ -16,7 +16,7 @@ export default function WorkInputs({ handleChange, response }) {
           name="workTitle"
           type="text"
           onChange={handleChange}
-          value={response[0].workTitle}
+          defaultValue={response[0].workTitle}
         />
       </div>
       <div className="input-group">
@@ -25,7 +25,7 @@ export default function WorkInputs({ handleChange, response }) {
           name="workResponsibilities"
           type="text"
           onChange={handleChange}
-          value={response[0].workResponsibilities}
+          defaultValue={response[0].workResponsibilities}
         />
       </div>
       <div className="input-group">
@@ -34,7 +34,7 @@ export default function WorkInputs({ handleChange, response }) {
           name="workDateStart"
           type="text"
           onChange={handleChange}
-          value={response[0].workDateStart}
+          defaultValue={response[0].workDateStart}
         />
       </div>
       <div className="input-group">
@@ -43,7 +43,7 @@ export default function WorkInputs({ handleChange, response }) {
           name="workDateEnd"
           type="text"
           onChange={handleChange}
-          value={response[0].workDateEnd}
+          defaultValue={response[0].workDateEnd}
         />
       </div>
     </div>
