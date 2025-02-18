@@ -32,9 +32,18 @@ export default function ResumeForm({ responses, setResponses }) {
   return (
     <div className="resume-form">
       <form action="submit">
-        <ContactInputs handleChange={handleContactChange}></ContactInputs>
-        <EducationInputs handleChange={handleEducationChange}></EducationInputs>
-        <WorkInputs handleChange={handleWorkChange}></WorkInputs>
+        <ContactInputs
+          handleChange={handleContactChange}
+          response={contactResponse}
+        ></ContactInputs>
+        <EducationInputs
+          handleChange={handleEducationChange}
+          response={educationResponse}
+        ></EducationInputs>
+        <WorkInputs
+          handleChange={handleWorkChange}
+          response={workResponse}
+        ></WorkInputs>
       </form>
     </div>
   );

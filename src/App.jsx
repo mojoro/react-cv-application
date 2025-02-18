@@ -4,25 +4,25 @@ import ResumePreview from "./components/ResumePreview";
 
 function App() {
   const [contactResponse, setContactResponse] = useState({
-    name: "",
-    email: "",
-    phone: "",
+    name: "Jim Jimmyson",
+    email: "jimjimmyson@gmail.com",
+    phone: "+58 399 493 3994",
   });
   const [educationResponse, setEducationResponse] = useState([
     {
-      educationName: "",
-      degree: "",
-      educationDateStart: "",
-      educationDateEnd: "",
+      educationName: "Cambridge",
+      degree: "Business",
+      educationDateStart: "then",
+      educationDateEnd: "past",
     },
   ]);
   const [workResponse, setWorkResponse] = useState([
     {
-      workName: "",
-      workTitle: "",
-      workResponsibilities: [""],
-      workDateStart: "",
-      workDateEnd: "",
+      workName: "Generic Company",
+      workTitle: "Drone",
+      workResponsibilities: ["livin' life for the corpos"],
+      workDateStart: "birth",
+      workDateEnd: "death",
     },
   ]);
 
