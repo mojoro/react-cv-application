@@ -48,16 +48,76 @@ body {
 }
 
 .preview-wrapper {
-  padding: 5rem;
-  flex: 1;
+  margin: 5rem;
+}
+
+.resume-tray {
+  height: 90vh;
+  width: calc(90vh * 210 / 297);
+  background-color: darkgoldenrod;
 }
 
 .resume-display {
   background-color: white;
   color: black;
   height: 85vh;
-  width: calc(85vh * 8.5 / 11);
+  width: calc(85vh * 210 / 297);
   font-size: 1vh;
-  padding: 1em;
   box-shadow: 8px 5px 15px 0px #000;
+}
+
+.contact-display {
+  background-color: rgb(6, 80, 80);
+  padding: 1em 1em 2em 1em;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 0.5fr;
+}
+
+.contact-display > .name {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 0;
+  align-self: end;
+  font-size: 2.5em;
+}
+
+.contact-display > .title {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0;
+}
+
+.contact-display > .email {
+  text-align: right;
+  padding-right: 0.5em;
+  border-right: 1px solid white;
+  font-size: 1.5em;
+  margin: 0;
+  align-self: center;
+}
+
+.contact-display > .phone {
+  padding-left: 0.5em;
+  border-left: 1px solid white;
+  font-size: 1.5em;
+  margin: 0;
+  align-self: center;
+}
+
+.resume-body {
+  margin: 2em;
+}
+
+.section-header {
+  width: 100%;
+  text-align: center;
+  color: rgb(7, 77, 77);
+  background-color: lightgray;
+  font-size: 1.8em;
+  padding: 0.2em 0;
+}
+
+.education-display {
 }

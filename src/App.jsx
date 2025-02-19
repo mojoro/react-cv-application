@@ -1,10 +1,11 @@
 import { useState } from "react";
 import ResumeForm from "./components/ResumeForm";
-import ResumePreview from "./components/ResumePreview";
+import ResumeDisplay from "./components/ResumeDisplay";
 
 function App() {
   const [contactResponse, setContactResponse] = useState({
     name: "Jim Jimmyson",
+    title: "Full-stack Developer",
     email: "jimjimmyson@gmail.com",
     phone: "+58 399 493 3994",
   });
@@ -38,7 +39,7 @@ function App() {
         responses={stateProps}
         setResponses={stateSetters}
       ></ResumeForm>
-      <ResumePreview responses={stateProps}></ResumePreview>
+      <ResumeDisplay responses={stateProps}></ResumeDisplay>
     </>
   );
 }

@@ -11,6 +11,15 @@ export default function ContactInputs({ handleChange, response }) {
         />
       </div>
       <div className="input-group">
+        <label htmlFor="title">Title</label>
+        <input
+          name="title"
+          type="text"
+          onChange={handleChange}
+          defaultValue={response.title}
+        />
+      </div>
+      <div className="input-group">
         <label htmlFor="email">Email</label>
         <input
           name="email"

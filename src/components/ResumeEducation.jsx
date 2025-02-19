@@ -1,11 +1,13 @@
 export default function ResumeEducation({ response }) {
+  if (!response) return null;
   const educationResponse = response;
-  return (
-    <div className="education-display">
-      <h1>{educationResponse[0].educationName}</h1>
-      <h1>{educationResponse[0].degree}</h1>
-      <h1>{educationResponse[0].educationDateStart}</h1>
-      <h1>{educationResponse[0].educationDateEnd}</h1>
+  const parsedResponses = educationResponse.map((entry, index) => (
+    <div className="education-entry" key={index}>
+      <h1>{entry.educationName}</h1>
+      <h1>{entry.degree}</h1>
+      <h1>{entry.educationDateStart}</h1>
+      <h1>{entry.educationDateEnd}</h1>
     </div>
-  );
+  ));
+  return <div className="education-display">{parsedResponses}</div>;
 }
