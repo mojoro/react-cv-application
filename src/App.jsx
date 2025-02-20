@@ -16,6 +16,8 @@ function App() {
       educationLocation: "Cambridge, MA",
       educationDateStart: "then",
       educationDateEnd: "past",
+      educationDescription: "I am very good at business.",
+      responseID: 0,
     },
   ]);
   const [workResponse, setWorkResponse] = useState([
@@ -26,6 +28,7 @@ function App() {
       workResponsibilities: ["livin' life for the corpos"],
       workDateStart: "birth",
       workDateEnd: "death",
+      responseID: 0,
     },
   ]);
 

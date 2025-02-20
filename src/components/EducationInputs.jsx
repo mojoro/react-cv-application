@@ -1,13 +1,45 @@
+import { useState } from "react";
+
 export default function EducationInputs({ handleChange, response }) {
+  const [editing, setEditing] = useState(true);
+  const handleSave = (e) => {
+    e.preventDefault();
+    setEditing(false);
+  };
+  const handleEdit = (e) => {
+    e.preventDefault();
+    setEditing(true);
+  };
+
   return (
     <div className="input-card education-group">
+      {editing ? (
+        <EditingInputs
+          handleChange={handleChange}
+          handleSave={handleSave}
+          response={response[0]}
+        ></EditingInputs>
+      ) : (
+        <SavedInputs
+          handleEdit={handleEdit}
+          response={response[0]}
+        ></SavedInputs>
+      )}
+    </div>
+  );
+}
+
+function EditingInputs({ handleChange, handleSave, response }) {
+  return (
+    <>
       <div className="input-group">
         <label htmlFor="educationName">Education Name</label>
         <input
           name="educationName"
           type="text"
           onChange={handleChange}
-          defaultValue={response[0].educationName}
+          defaultValue={response.educationName}
+          data-key={response.responseID}
         />
       </div>
       <div className="input-group">
@@ -16,7 +48,8 @@ export default function EducationInputs({ handleChange, response }) {
           name="degree"
           type="text"
           onChange={handleChange}
-          defaultValue={response[0].degree}
+          defaultValue={response.degree}
+          data-key={response.responseID}
         />
       </div>
       <div className="input-group">
@@ -25,7 +58,8 @@ export default function EducationInputs({ handleChange, response }) {
           name="location"
           type="text"
           onChange={handleChange}
-          defaultValue={response[0].educationLocation}
+          defaultValue={response.educationLocation}
+          data-key={response.responseID}
         />
       </div>
       <div className="input-group">
@@ -34,7 +68,8 @@ export default function EducationInputs({ handleChange, response }) {
           name="educationDateStart"
           type="text"
           onChange={handleChange}
-          defaultValue={response[0].educationDateStart}
+          defaultValue={response.educationDateStart}
+          data-key={response.responseID}
         />
       </div>
       <div className="input-group">
@@ -43,9 +78,57 @@ export default function EducationInputs({ handleChange, response }) {
           name="educationDateEnd"
           type="text"
           onChange={handleChange}
-          defaultValue={response[0].educationDateEnd}
+          defaultValue={response.educationDateEnd}
+          data-key={response.responseID}
         />
       </div>
-    </div>
+      <div className="input-group">
+        <label htmlFor="educationDescription">Description (optional)</label>
+        <input
+          name="educationDescription"
+          type="text"
+          onChange={handleChange}
+          defaultValue={response.educationDescription}
+          data-key={response.responseID}
+        />
+      </div>
+      <button className="save education-button" onClick={handleSave}>
+        Save
+      </button>
+    </>
+  );
+}
+
+function SavedInputs({ handleEdit, response }) {
+  return (
+    <>
+      <div className="input-group response-group">
+        <h3>Education Name</h3>
+        <p>{response.educationName}</p>
+      </div>
+      <div className="input-group response-group">
+        <h3>Degree</h3>
+        <p>{response.degree}</p>
+      </div>
+      <div className="input-group response-group">
+        <h3>Location</h3>
+        <p>{response.educationLocation}</p>
+      </div>
+      <div className="input-group response-group">
+        <h3>Start Date</h3>
+        <p>{response.educationDateStart}</p>
+      </div>
+      <div className="input-group response-group">
+        <h3>End Date</h3>
+        <p>{response.educationDateEnd}</p>
+      </div>
+      <div className="input-group response-group">
+        <h3>Description (optional)</h3>
+        <p>{response.educationDescription}</p>
+      </div>
+      <button className="save" onClick={handleEdit}>
+        Edit
+      </button>
+    </>
   );
 }

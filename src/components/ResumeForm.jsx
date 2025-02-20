@@ -16,9 +16,12 @@ export default function ResumeForm({ responses, setResponses }) {
 
   const handleEducationChange = (e) => {
     const inputType = e.target.name;
-    const newResponse = [
-      { ...educationResponse[0], [inputType]: e.target.value },
-    ];
+    const key = e.target.dataset.key;
+    const newResponse = [...educationResponse];
+    newResponse[key][inputType] = e.target.value;
+    // const newResponse = [
+    //   { ...educationResponse[0], [inputType]: e.target.value },
+    // ];
 
     setEducationResponse(newResponse);
   };

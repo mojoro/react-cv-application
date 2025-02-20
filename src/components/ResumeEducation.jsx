@@ -12,6 +12,11 @@ export default function ResumeEducation({ response }) {
       <div className="title-group">
         <h2 className="organization-name">{entry.educationName}</h2>
         <h3 className="organization-title">{entry.degree}</h3>
+        {entry.educationDescription ? (
+          <p className="organization-description">
+            {entry.educationDescription}
+          </p>
+        ) : null}
       </div>
     </div>
   ));
