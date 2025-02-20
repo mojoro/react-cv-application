@@ -13,6 +13,7 @@ function App() {
     {
       educationName: "Cambridge",
       degree: "Business",
+      educationLocation: "Cambridge, MA",
       educationDateStart: "then",
       educationDateEnd: "past",
     },
@@ -21,6 +22,7 @@ function App() {
     {
       workName: "Generic Company",
       workTitle: "Drone",
+      workLocation: "Earth",
       workResponsibilities: ["livin' life for the corpos"],
       workDateStart: "birth",
       workDateEnd: "death",

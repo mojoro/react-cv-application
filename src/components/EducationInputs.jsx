@@ -20,6 +20,15 @@ export default function EducationInputs({ handleChange, response }) {
         />
       </div>
       <div className="input-group">
+        <label htmlFor="location">Location</label>
+        <input
+          name="location"
+          type="text"
+          onChange={handleChange}
+          defaultValue={response[0].educationLocation}
+        />
+      </div>
+      <div className="input-group">
         <label htmlFor="educationDateStart">Start Date</label>
         <input
           name="educationDateStart"

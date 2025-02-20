@@ -20,6 +20,15 @@ export default function WorkInputs({ handleChange, response }) {
         />
       </div>
       <div className="input-group">
+        <label htmlFor="location">Location</label>
+        <input
+          name="location"
+          type="text"
+          onChange={handleChange}
+          defaultValue={response[0].workLocation}
+        />
+      </div>
+      <div className="input-group">
         <label htmlFor="workResponsibilities">Responsibilities</label>
         <input
           name="workResponsibilities"

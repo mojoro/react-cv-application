@@ -107,7 +107,7 @@ body {
 }
 
 .resume-body {
-  margin: 2em;
+  margin: 3em;
 }
 
 .section-header {
@@ -115,9 +115,33 @@ body {
   text-align: center;
   color: rgb(7, 77, 77);
   background-color: lightgray;
-  font-size: 1.8em;
+  font-size: 1.6em;
   padding: 0.2em 0;
+  margin-bottom: 0;
 }
 
-.education-entry {
+.organization-entry {
+  display: flex;
+  margin: 0.5em 0 2em;
+}
+
+.info-group {
+  min-width: 12.5em;
+}
+
+.organization-entry h1,
+.organization-entry h2,
+.organization-entry h3,
+.organization-entry p {
+  margin: 0;
+  font-size: 1.15em;
+  font-weight: 350;
+}
+
+.organization-entry .organization-name {
+  font-weight: 700;
+}
+
+.organization-entry .organization-description {
+  margin-top: 0.5em;
 }
