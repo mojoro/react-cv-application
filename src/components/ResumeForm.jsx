@@ -41,6 +41,7 @@ export default function ResumeForm({ responses, setResponses }) {
         <EducationInputs
           handleChange={handleEducationChange}
           response={educationResponse}
+          setResponse={setEducationResponse}
         ></EducationInputs>
         <WorkInputs
           handleChange={handleWorkChange}
