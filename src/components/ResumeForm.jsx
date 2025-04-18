@@ -3,8 +3,8 @@ import EducationInputs from "./EducationInputs";
 import WorkInputs from "./WorkInputs";
 
 export default function ResumeForm({ responses, setResponses }) {
-  const [contactResponse, educationResponse, workResponse] = responses;
-  const [setContactResponse, setEducationResponse, setWorkResponse] =
+  const [contactResponse, educationResponses, workResponses] = responses;
+  const [setContactResponse, setEducationResponses, setWorkResponses] =
     setResponses;
 
   const handleContactChange = (e) => {
@@ -17,19 +17,19 @@ export default function ResumeForm({ responses, setResponses }) {
   const handleEducationChange = (e) => {
     const inputType = e.target.name;
     const key = e.target.dataset.key;
-    const newResponse = [...educationResponse];
+    const newResponse = [...educationResponses];
     newResponse[key][inputType] = e.target.value;
 
-    setEducationResponse(newResponse);
+    setEducationResponses(newResponse);
   };
 
   const handleWorkChange = (e) => {
     const inputType = e.target.name;
     const key = e.target.dataset.key;
-    const newResponse = [...workResponse];
+    const newResponse = [...workResponses];
     newResponse[key][inputType] = e.target.value;
 
-    setWorkResponse(newResponse);
+    setWorkResponses(newResponse);
   };
   return (
     <div className="resume-form">
@@ -40,12 +40,13 @@ export default function ResumeForm({ responses, setResponses }) {
         ></ContactInputs>
         <EducationInputs
           handleChange={handleEducationChange}
-          response={educationResponse}
-          setResponse={setEducationResponse}
+          responses={educationResponses}
+          setResponses={setEducationResponses}
         ></EducationInputs>
         <WorkInputs
           handleChange={handleWorkChange}
-          response={workResponse}
+          responses={workResponses}
+          setResponses={setWorkResponses}
         ></WorkInputs>
       </form>
     </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "@fortawesome/fontawesome-free/css/all.css";
 import ResumeForm from "./components/ResumeForm";
 import ResumeDisplay from "./components/ResumeDisplay";
 
@@ -9,7 +10,7 @@ function App() {
     email: "jimjimmyson@gmail.com",
     phone: "+58 399 493 3994",
   });
-  const [educationResponse, setEducationResponse] = useState([
+  const [educationResponses, setEducationResponses] = useState([
     {
       educationName: "Cambridge",
       degree: "Business",
@@ -18,9 +19,10 @@ function App() {
       educationDateEnd: "past",
       educationDescription: "I am very good at business.",
       responseID: 0,
+      editing: false,
     },
   ]);
-  const [workResponse, setWorkResponse] = useState([
+  const [workResponses, setWorkResponses] = useState([
     {
       workName: "Generic Company",
       workTitle: "Drone",
@@ -32,11 +34,11 @@ function App() {
     },
   ]);
 
-  const stateProps = [contactResponse, educationResponse, workResponse];
+  const stateProps = [contactResponse, educationResponses, workResponses];
   const stateSetters = [
     setContactResponse,
-    setEducationResponse,
-    setWorkResponse,
+    setEducationResponses,
+    setWorkResponses,
   ];
   return (
     <>
