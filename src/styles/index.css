@@ -36,11 +36,43 @@ body {
 .input-card {
   display: flex;
   flex-direction: column;
+  width: 300px;
   background-color: #444;
   padding: 1rem;
   margin-bottom: 5rem;
-  box-shadow: 4px 2px 15px 0px #000;
+  box-shadow: 0px 0px 15px 0px #000;
   gap: 5px;
+  transition: all linear 0.15s;
+  font-size: 0.8rem;
+}
+
+.input-card:hover {
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.6);
+}
+
+.response-area {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 350px;
+  overflow-y: auto;
+  margin-right: -10px;
+}
+
+.response-area::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+.response-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.response-area::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+.response-area::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
 }
 
 .response-wrapper {
@@ -48,15 +80,16 @@ body {
   flex-direction: column;
   gap: 5px;
   position: relative;
-  padding: 2rem 0;
+  padding: 1rem 0 2rem 0;
 }
 
 .response-wrapper > .controls {
   position: absolute;
   display: flex;
   gap: 5px;
-  right: 0;
-  top: -10px;
+  right: 5px;
+  top: 0px;
+  z-index: 10;
 }
 
 .controls > button {
@@ -86,9 +119,11 @@ button.save:hover {
 .input-group {
   display: flex;
   flex-direction: column;
+  margin-right: 10px;
 }
 
 .preview-wrapper {
+  align-self: flex-start;
   margin: 5rem;
 }
 
@@ -101,9 +136,9 @@ button.save:hover {
 .resume-display {
   background-color: white;
   color: black;
-  height: 85vh;
-  width: calc(85vh * 210 / 297);
-  font-size: 1vh;
+  height: 110vh;
+  width: calc(110vh * 210 / 297);
+  font-size: 1.25vh;
   box-shadow: 8px 5px 15px 0px #000;
 }
 

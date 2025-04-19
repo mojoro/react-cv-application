@@ -41,23 +41,25 @@ export default function WorkInputs({ handleChange, responses, setResponses }) {
 
   return (
     <div className="input-card">
-      {responses.map((response, index) =>
-        response.editing ? (
-          <EditingInputs
-            key={index}
-            handleChange={handleChange}
-            toggleEdit={toggleEdit}
-            response={response}
-          />
-        ) : (
-          <SavedInputs
-            key={index}
-            toggleEdit={toggleEdit}
-            handleDelete={handleDelete}
-            response={response}
-          />
-        )
-      )}
+      <div className="response-area">
+        {responses.map((response, index) =>
+          response.editing ? (
+            <EditingInputs
+              key={index}
+              handleChange={handleChange}
+              toggleEdit={toggleEdit}
+              response={response}
+            />
+          ) : (
+            <SavedInputs
+              key={index}
+              toggleEdit={toggleEdit}
+              handleDelete={handleDelete}
+              response={response}
+            />
+          )
+        )}
+      </div>
       <button className="save" onClick={handleAdd}>
         <i onClick={handleAdd} className="fas fa-plus"></i>
       </button>
