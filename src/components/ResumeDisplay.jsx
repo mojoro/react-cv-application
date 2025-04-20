@@ -10,13 +10,16 @@ export default function ResumeDisplay(props) {
       <div className="resume-display">
         <ResumeContact response={contactResponse}></ResumeContact>
         <div className="resume-body">
-          <h1 className="section-header">
-            {hasContent(educationResponse) ? "Education" : null}
-          </h1>
+          {hasContent(educationResponse) ? (
+            <h1 className="section-header">Education</h1>
+          ) : null}
+
           <ResumeEducation response={educationResponse}></ResumeEducation>
-          <h1 className="section-header">
-            {hasContent(workResponse) ? "Professional Experience" : null}
-          </h1>
+
+          {hasContent(workResponse) ? (
+            <h1 className="section-header">Professional Experience</h1>
+          ) : null}
+
           <ResumeExperience response={workResponse}></ResumeExperience>
         </div>
       </div>
